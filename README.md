@@ -1,18 +1,108 @@
 # PCB Dimension Calculator
 
+A Laravel-based application that calculates PCB dimensions from Gerber ZIP files by analyzing the PCB outline data.
+
+The application extracts the PCB outline information from Gerber files and calculates the board width and height automatically.
+
+---
+
+## Features
+
+- Upload Gerber ZIP files
+- File type and size validation
+- Automatic PCB outline detection (`Edge_Cuts` / `Profile`)
+- Gerber coordinate parsing
+- Automatic PCB width and height calculation
+- Display dimensions in millimeters
+- Temporary file cleanup after processing
+
+---
+
+## Setup Instructions
+
+## Requirements
+
+Before running the project, make sure you have:
+
+- PHP >= 8.2
+- Composer
+- Laravel 12
+- Node.js and npm
+
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+
+cd pcb-dimension-calculator
+```
+
+Install dependencies:
+
+```bash
+composer install
+
+npm install
+```
+
+Create environment file:
+
+```bash
+cp .env.example .env
+```
+
+Generate application key:
+
+```bash
+php artisan key:generate
+```
+
+Start the application:
+
+```bash
+php artisan serve
+```
+
+Open in browser:
+
+```
+http://127.0.0.1:8000
+```
+---
+
 ## Approach
 
-This Laravel application calculates PCB dimensions from a Gerber ZIP file.
+The application extracts PCB outline data from the Gerber ZIP file and calculates board dimensions using outline coordinates.
 
-### Flow:
+Process:
 
-1. User uploads a Gerber ZIP file.
-2. Validate file type and size.
-3. Extract ZIP contents into a temporary directory.
-4. Identify the PCB outline layer (`Edge_Cuts` / `Profile`).
-5. Parse Gerber coordinate data.
-6. Calculate PCB width and height using the outline coordinates.
-7. Remove temporary files after processing.
+- Validate and extract Gerber ZIP file.
+- Find PCB outline layer (`Edge_Cuts` / `Profile`).
+- Parse X/Y coordinates.
+- Calculate width and height using the bounding box approach.
+- Remove temporary files after processing.
+
+Architecture:
+
+```
+Controller
+|
+GerberParser Service
+|
+Gerber Processing
+|
+Dimension Result
+```
+
+Calculation:
+```
+Width = Maximum X - Minimum X
+
+Height = Maximum Y - Minimum Y
+```
 
 ---
 
