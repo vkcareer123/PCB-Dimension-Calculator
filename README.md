@@ -27,7 +27,6 @@ Before running the project, make sure you have:
 - PHP >= 8.2
 - Composer
 - Laravel 12
-- Node.js and npm
 
 
 ## Installation
