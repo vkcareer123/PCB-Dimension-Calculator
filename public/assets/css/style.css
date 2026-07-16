@@ -1,0 +1,184 @@
+* {
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+height: 100vh;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #f4f7fb;
+}
+
+.card {
+width: 420px;
+background: white;
+padding: 35px;
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+h2 {
+margin-bottom: 25px;
+color: #1f2937;
+}
+
+.upload-box {
+border: 2px dashed #2563eb;
+padding: 25px;
+border-radius: 10px;
+margin-bottom: 20px;
+background: #f8fafc;
+}
+
+input[type="file"] {
+width: 100%;
+padding: 10px;
+}
+
+button {
+width: 100%;
+padding: 12px;
+background: #2563eb;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+background: #1d4ed8;
+}
+
+.note {
+margin-top: 15px;
+font-size: 13px;
+color: #6b7280;
+}
+
+.error-box {
+background: #fee2e2;
+color: #b91c1c;
+padding: 12px;
+border-radius: 8px;
+margin-bottom: 20px;
+text-align: left;
+font-size: 14px;
+}
+
+.error-box ul {
+margin: 0;
+padding-left: 20px;
+}
+
+.error {
+color: red;
+font-size: 14px;
+display:block;
+margin:10px 0px;
+}
+
+.instruction-box {
+background: #eff6ff;
+border-left: 4px solid #2563eb;
+padding: 15px;
+margin-bottom: 20px;
+border-radius: 8px;
+text-align: left;
+font-size: 14px;
+color: #374151;
+margin: 20px 0px;
+}
+
+.instruction-box h4 {
+margin: 0 0 10px;
+color: #1d4ed8;
+}
+
+.instruction-box ul {
+margin: 0;
+padding-left: 20px;
+}
+
+.instruction-box li {
+margin-bottom: 6px;
+}
+.subtitle {
+color:#6b7280;
+font-size:14px;
+margin-top:-15px;
+margin-bottom:25px;
+}
+.file-name {
+margin-top:10px;
+font-size:13px;
+color:#2563eb;
+}
+
+.card {
+    width: 420px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #1f2937;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+    color: #374151;
+    background: #f8fafc;
+    font-size: 16px;
+}
+
+tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dimension {
+    font-weight: bold;
+    color: #111827;
+}
+
+a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: #1d4ed8;
+}
+
+.success {
+    color: #16a34a;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
