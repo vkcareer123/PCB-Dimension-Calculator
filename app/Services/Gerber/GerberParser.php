@@ -95,7 +95,6 @@ class GerberParser
                 return $file;
             }
         }
-
         throw new Exception('PCB outline not found. Please make sure your Gerber ZIP contains the Edge_Cuts layer.');
     }
 }
