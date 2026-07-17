@@ -51,13 +51,17 @@ npm install
 Create environment file:
 
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
 Generate application key:
 
 ```bash
 php artisan key:generate
+```
+
+```bash
+php artisan migrate
 ```
 
 Start the application:
